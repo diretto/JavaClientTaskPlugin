@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+         updateCheck="false"
+         monitoring="autodetect" 
+         dynamicConfig="true">
+
+	<transactionManagerLookup class="net.sf.ehcache.transaction.manager.DefaultTransactionManagerLookup"
+                              properties="jndiName=java:/TransactionManager" 
+                              propertySeparator=";" />
+
+	<cacheManagerEventListenerFactory class="" 
+                                      properties="" />
+
+	<!-- timeToIdleSeconds: time unit = seconds / timeToLiveSeconds: time unit = seconds -->
+
+	<defaultCache maxElementsInMemory="5000"
+                  overflowToDisk="false"
+                  eternal="false"
+                  timeToIdleSeconds="300" 
+                  timeToLiveSeconds="300"
+                  memoryStoreEvictionPolicy="LRU" 
+                  statistics="true" />
+
+	<cache name="TaskCache" 
+           maxElementsInMemory="5000" 
+           overflowToDisk="false" 
+           eternal="false" 
+           timeToIdleSeconds="300" 
+           timeToLiveSeconds="300"
+           memoryStoreEvictionPolicy="LRU" 
+           statistics="true" />
+           
+</ehcache>

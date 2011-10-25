@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="config.xsd">
+
+	<name>org.diretto.api.external.task</name>
+	<api-version>v2</api-version>
+	<service-class>org.diretto.api.client.external.task.TaskServiceImpl</service-class>
+
+	<cache>
+		<cache-config-file>org/diretto/api/client/external/task/ehcache.xml</cache-config-file>
+		<cache-name>TaskCache</cache-name>
+		<cache-activated>true</cache-activated>
+	</cache>
+
+</config>
